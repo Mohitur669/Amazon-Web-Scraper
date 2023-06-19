@@ -9,7 +9,7 @@ In this project we are going to use amazon product (ps5) search result link as t
 
 ## Prerequisites
 1. Python 3.6+
-2. install BeautifulSoup ```pip install beautifulsoup4```
+2. install BeautifulSoup **```pip install beautifulsoup4```**
 3. install Requests ```pip install requests```
 4. install Pandas ```pip install pandas```
 5. the user-agent of your browser. To get the user-agent, just search for "my user agent" on Google and copy the user-agent string.
