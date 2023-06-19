@@ -8,7 +8,7 @@ URL = "https://www.amazon.in/s?k=playstation+5&sprefix=pla%2Caps%2C464&ref=nb_sb
 
 # to tell the website that we are not a bot we need to pass headers (using user-agent)
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+    "User-Agent": "your user agent",
     "Accept-Language": "en-US, en;q=0.5",
 }
 
@@ -49,7 +49,7 @@ new_soup = BeautifulSoup(new_webpage.content, "html.parser")
 print(new_soup)
 
 # Now we need to find the title of the product
-title = new_soup.find("span", attrs={"id":'productTitle'}).text.strip()
+title = new_soup.find("span", attrs={"id": 'productTitle'}).text.strip()
 print(title)
 
 # Now we need to find the price of the product
@@ -61,7 +61,8 @@ new_soup.find(
 )
 
 # but above code output contains duplicate price, to solve
-new_soup.find("span",attrs={"class": "a-price aok-align-center reinventPricePriceToPayMargin priceToPay"},).find("span", attrs={"class": "a-offscreen"}).text
+new_soup.find("span", attrs={"class": "a-price aok-align-center reinventPricePriceToPayMargin priceToPay"}, ).find(
+    "span", attrs={"class": "a-offscreen"}).text
 
 # Now we need to find the rating of the product
 new_soup.find("span", attrs={"class": "a-icon-alt"}).text
